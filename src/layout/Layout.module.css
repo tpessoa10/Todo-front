@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: flex-start;
+    background-color: rgba(240, 248, 255, 0.514);
+    overflow-y: auto;
+    flex-wrap: wrap;
+}
+
+.content{
+    text-align: center;
+}

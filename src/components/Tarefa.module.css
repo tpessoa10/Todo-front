@@ -1,0 +1,55 @@
+.tarefa{
+    background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 15%;
+    height: 33%;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.tarefa h3 {
+    color: #333;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+  
+.tarefa div {
+    color: #666;
+    font-size: 14px;
+}
+  
+.atualizar{
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+  
+.deletar{
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+  
+  /* Estilos da data */
+.tarefa span {
+    color: #999;
+    font-size: 12px;
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+

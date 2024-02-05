@@ -1,0 +1,15 @@
+.container{
+    background-color: white;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 8px;
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    overflow: auto;
+}
