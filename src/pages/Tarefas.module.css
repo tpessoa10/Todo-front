@@ -1,0 +1,22 @@
+.botao{
+    background-color: #0010bc;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.divModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escuro com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,17 +1,43 @@
+import api from '../api/api'
 import styles from './Tarefa.module.css'
 
-export default function Tarefa(){
+interface tarefa{
+    id: number,
+    titulo: string,
+    descricao: string,
+    data:string
+}
+
+interface TarefaProps{
+    tarefa:tarefa
+    enviarId:(n: number) => void
+}
+
+export default function Tarefa({tarefa, enviarId}:TarefaProps){
+
+    const handleClick = () => {
+        enviarId(tarefa.id)
+    }
+
+    const handleDeletarTarefa = (id:number) => {
+        api.delete(`/tarefas/${id}`)
+        .then((response) => {
+            console.log(response.data)
+        })
+        .catch((erro) => {
+            console.log(erro)
+        })
+    }
+
     return(
         <div className={styles.tarefa}>
-            <h3>Titulo Tarefa</h3>
+            <h3>{tarefa.titulo}</h3>
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus suscipit assumenda eius voluptas architecto voluptatem nisi exercitationem unde esse, ut nobis, ullam doloribus 
-                    velit, ratione nesciunt reiciendis voluptatibus rerum dolor
-                </p>
+                <p>{tarefa.descricao}</p>
             </div>
-            <span>30/10/2000</span>
-            <button className={styles.atualizar}>Atualizar</button>
-            <button className={styles.deletar}>Apagar</button>
+            <span>{tarefa.data}</span>
+            <button className={styles.atualizar} onClick={handleClick}>Atualizar</button>
+            <button className={styles.deletar} onClick={() => handleDeletarTarefa(tarefa.id)} id={tarefa.id.toString()}>Apagar</button>
         </div>
     )
 }
