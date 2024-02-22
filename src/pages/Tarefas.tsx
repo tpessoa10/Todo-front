@@ -12,6 +12,8 @@ export default function Tarefas(){
     const [modalAberta, setModalAberta] = useState(false)
     const [idRecebido, setIdRecebido] = useState()
 
+    const token = sessionStorage.getItem('token')
+
     useEffect(() => {
         const fetchData = async () => {
             try{
@@ -37,8 +39,16 @@ export default function Tarefas(){
         setModalAberta(bool)
     }
 
+    const fazerLogout = () => {
+        sessionStorage.removeItem('token')
+        window.location.reload()
+    }
+
     return (
         <>
+        <div className={styles.sair}>
+            <button className={styles.botao} onClick={fazerLogout}>Sair</button>
+        </div>
             <h1>Tarefas</h1>
             <PaginaBase>
                 {tarefas.map((tarefa) => (
